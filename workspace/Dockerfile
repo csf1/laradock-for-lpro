@@ -1879,6 +1879,20 @@ RUN if [ ${INSTALL_GITHUB_CLI} = true ]; then \
     && apt install gh -y \
 ;fi
 
+###########################################################################
+# scrapyのインストール:
+###########################################################################
+
+RUN if [ true = true ]; then \
+  # scrapy and spider
+  pip3 install scrapy \
+  && pip3 install fake-useragent \
+  # MySQL
+  && pip3 install PyMySQL \
+  # .env
+  && pip3 install python-dotenv \
+  && pip3 install --upgrade requests \
+;fi
 
 #
 #--------------------------------------------------------------------------
