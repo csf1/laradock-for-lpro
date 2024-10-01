@@ -1892,6 +1892,7 @@ RUN if [ true = true ]; then \
   # .env
   && pip3 install python-dotenv \
   && pip3 install --upgrade requests \
+  && pip3 install boto3 \
 ;fi
 
 #
